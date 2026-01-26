@@ -1,0 +1,187 @@
+25-01-2026 20:47:41.158 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application v0.0.1-SNAPSHOT using Java 21.0.8 with PID 29316 (D:\ProyectosJava\ProyectoSpringBootBasico\target\modulo39-0.0.1-SNAPSHOT.jar started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 20:47:41.161 [main] INFO  c.ebac.modulo39.Modulo39Application - No active profile set, falling back to 1 default profile: "default"
+25-01-2026 20:47:44.236 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: EntityManagerFactory interface [interface org.hibernate.SessionFactory] seems to conflict with Spring's EntityManagerFactoryInfo mixin - consider resetting the 'entityManagerFactoryInterface' property to plain [jakarta.persistence.EntityManagerFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ebac.modulo39.Modulo39Application.main(Modulo39Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: EntityManagerFactory interface [interface org.hibernate.SessionFactory] seems to conflict with Spring's EntityManagerFactoryInfo mixin - consider resetting the 'entityManagerFactoryInterface' property to plain [jakarta.persistence.EntityManagerFactory]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createEntityManagerFactoryProxy(AbstractEntityManagerFactoryBean.java:469)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:403)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: methods with same signature getSchemaManager() but incompatible return types: [interface org.hibernate.relational.SchemaManager, interface jakarta.persistence.SchemaManager]
+	at java.base/java.lang.reflect.ProxyGenerator.checkReturnTypes(ProxyGenerator.java:311)
+	at java.base/java.lang.reflect.ProxyGenerator.generateClassFile(ProxyGenerator.java:488)
+	at java.base/java.lang.reflect.ProxyGenerator.generateProxyClass(ProxyGenerator.java:178)
+	at java.base/java.lang.reflect.Proxy$ProxyBuilder.defineProxyClass(Proxy.java:544)
+	at java.base/java.lang.reflect.Proxy$ProxyBuilder.build(Proxy.java:657)
+	at java.base/java.lang.reflect.Proxy.lambda$getProxyConstructor$1(Proxy.java:440)
+	at java.base/jdk.internal.loader.AbstractClassLoaderValue$Memoizer.get(AbstractClassLoaderValue.java:329)
+	at java.base/jdk.internal.loader.AbstractClassLoaderValue.computeIfAbsent(AbstractClassLoaderValue.java:205)
+	at java.base/java.lang.reflect.Proxy.getProxyConstructor(Proxy.java:438)
+	at java.base/java.lang.reflect.Proxy.newProxyInstance(Proxy.java:1034)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.createEntityManagerFactoryProxy(AbstractEntityManagerFactoryBean.java:464)
+	... 26 common frames omitted
+25-01-2026 20:54:50.155 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application v0.0.1-SNAPSHOT using Java 21.0.8 with PID 28276 (D:\ProyectosJava\ProyectoSpringBootBasico\target\modulo39-0.0.1-SNAPSHOT.jar started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 20:54:50.157 [main] INFO  c.ebac.modulo39.Modulo39Application - No active profile set, falling back to 1 default profile: "default"
+25-01-2026 20:54:53.239 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field telefonoservice in com.ebac.modulo39.controller.TelefonoController required a bean of type 'com.ebac.modulo39.service.TelefonoService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.ebac.modulo39.service.TelefonoService' in your configuration.
+
+25-01-2026 20:57:06.057 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application v0.0.1-SNAPSHOT using Java 21.0.8 with PID 11168 (D:\ProyectosJava\ProyectoSpringBootBasico\target\modulo39-0.0.1-SNAPSHOT.jar started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 20:57:06.060 [main] INFO  c.ebac.modulo39.Modulo39Application - No active profile set, falling back to 1 default profile: "default"
+25-01-2026 20:57:09.708 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 3.939 seconds (process running for 4.616)
+25-01-2026 20:59:39.768 [http-nio-8080-exec-1] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 21:00:00.445 [http-nio-8080-exec-4] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 21:02:08.422 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 30840 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 21:02:08.425 [main] INFO  c.ebac.modulo39.Modulo39Application - No active profile set, falling back to 1 default profile: "default"
+25-01-2026 21:02:12.077 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 3.951 seconds (process running for 4.53)
+25-01-2026 21:08:19.417 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 26848 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 21:08:19.420 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 21:08:21.594 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.h2Dialect] as strategy [org.hibernate.dialect.Dialect]
+25-01-2026 21:08:21.669 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.h2Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ebac.modulo39.Modulo39Application.main(Modulo39Application.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.h2Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:277)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.h2Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:154)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:236)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:189)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:123)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:274)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.h2Dialect]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:150)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.h2Dialect
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:215)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120)
+	... 40 common frames omitted
+Caused by: java.lang.Throwable: null
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:208)
+	... 45 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.h2Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205)
+		... 45 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.h2Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205)
+		... 45 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.h2Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205)
+		... 45 common frames omitted
+25-01-2026 21:13:31.832 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 3052 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 21:13:31.833 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 21:13:35.612 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 4.091 seconds (process running for 4.587)
+25-01-2026 21:14:35.707 [http-nio-8080-exec-2] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 21:37:21.191 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 6388 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 21:37:21.192 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 21:37:25.036 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 4.166 seconds (process running for 4.673)
+25-01-2026 21:38:15.214 [http-nio-8080-exec-3] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 21:48:56.854 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 21088 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 21:48:56.858 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 21:49:01.469 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 5.033 seconds (process running for 5.648)
+25-01-2026 21:50:29.526 [http-nio-8080-exec-4] INFO  c.e.m.controller.UsuarioController - Obteniendo usuario por id 1...
+25-01-2026 21:51:38.478 [http-nio-8080-exec-7] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 21:53:17.862 [http-nio-8080-exec-10] INFO  c.e.m.controller.TelefonoController - Obteniendo telefonos...
+25-01-2026 21:53:47.173 [http-nio-8080-exec-2] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 22:03:25.821 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 30388 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 22:03:25.824 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 22:03:29.682 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 4.178 seconds (process running for 4.651)
+25-01-2026 22:04:26.556 [http-nio-8080-exec-5] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 22:06:09.187 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 31312 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 22:06:09.189 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "dev"
+25-01-2026 22:06:12.915 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 4.035 seconds (process running for 4.52)
+25-01-2026 22:07:03.133 [http-nio-8080-exec-3] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 22:16:10.381 [main] INFO  c.ebac.modulo39.Modulo39Application - Starting Modulo39Application using Java 17.0.17 with PID 27308 (D:\ProyectosJava\ProyectoSpringBootBasico\target\classes started by nesto in D:\ProyectosJava\ProyectoSpringBootBasico)
+25-01-2026 22:16:10.390 [main] INFO  c.ebac.modulo39.Modulo39Application - The following 1 profile is active: "prod"
+25-01-2026 22:16:14.764 [main] INFO  c.ebac.modulo39.Modulo39Application - Started Modulo39Application in 4.786 seconds (process running for 5.42)
+25-01-2026 22:16:37.765 [http-nio-8080-exec-2] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
+25-01-2026 22:17:01.685 [http-nio-8080-exec-5] INFO  c.e.m.controller.UsuarioController - Obteniendo usuarios...
